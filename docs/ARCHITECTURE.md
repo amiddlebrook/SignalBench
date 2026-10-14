@@ -37,3 +37,7 @@ Free-tier hosting deliberately limits scope. This is not a horizontally scalable
 ## Phase 3: Statistical release gates
 
 Optional Wilson 95% lower-bound thresholds limit false confidence from small evaluation samples. A baseline regression block remains mandatory. Wilson intervals assume independent Bernoulli outcomes; correlated or cherry-picked tests invalidate statistical interpretation.
+
+## Phase 4: Delegated API credentials
+
+`0004_access.sql` introduces expiring, revocable, SHA-256-hashed delegated credentials and an issuance/revocation audit. Authentication is enforced by `src/access.ts` from `withApi`, before any domain route executes. The shared API key policy does **not** implement object-level ACLs or tenant isolation. Access operations are confined to the root Worker `ADMIN_TOKEN`, and delegated keys are intentionally unable to administer credentials. See [`SECURITY.md`](SECURITY.md).
