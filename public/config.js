@@ -142,6 +142,11 @@ export default {
           "name": "min_cases",
           "type": "number",
           "default": 10
+        },
+        {
+          "name": "confidence_floor",
+          "type": "number",
+          "default": 0.5
         }
       ],
       "columns": [
@@ -149,7 +154,8 @@ export default {
         "suite",
         "min_pass_rate",
         "min_cases",
-        "created_at"
+        "created_at",
+        "confidence_floor"
       ],
       "action": {
         "title": "Check completed run",

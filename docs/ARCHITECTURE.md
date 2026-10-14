@@ -33,3 +33,7 @@ All persistent data is stored in per-application D1. The application frontend an
 ## Design tradeoffs
 
 Free-tier hosting deliberately limits scope. This is not a horizontally scalable, multi-tenant production system; global SLAs, audited governance and paid provider budgets cannot be validated with tiny synthetic workloads. No paid upgrade should occur automatically.
+
+## Phase 3: Statistical release gates
+
+Optional Wilson 95% lower-bound thresholds limit false confidence from small evaluation samples. A baseline regression block remains mandatory. Wilson intervals assume independent Bernoulli outcomes; correlated or cherry-picked tests invalidate statistical interpretation.
