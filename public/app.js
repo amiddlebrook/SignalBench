@@ -38,7 +38,7 @@ async function fieldsHtml(fields){return (await Promise.all(fields.map(async f=>
  else if(f.type==='reference'){
   let rows=[];try{rows=(await api(f.source)).items||[]}catch(e){rows=[]}
   field=`<select id="${id}" name="${f.name}">${rows.length?rows.map(r=>`<option value="${esc(r.id)}">${esc(r.name||r.title||r.experiment||r.id)}</option>`).join(''):'<option value="">Create the referenced record first</option>'}</select>`;
- } else field=`<input id="${id}" name="${f.name}" type="${f.type==='number'?'number':'text'}" value="${esc(def)}" />`;
+ } else field=`<input id="${id}" name="${f.name}" type="${f.type==='number'?'number':'text'}" ${f.type==='number'?'step="any"':''} value="${esc(def)}" />`;
  return `<div class="field"><label for="${id}">${esc(col(f.name))}</label>${field}</div>`;
  }))).join('')}
 function readForm(form,fields){const out={};for(const f of fields){const val=form.elements[f.name]?.value||'';if(f.type==='json'){try{out[f.name]=JSON.parse(val)}catch{throw new Error(`${col(f.name)} must contain valid JSON`)}}else if(f.type==='number')out[f.name]=Number(val);else out[f.name]=val;}return out}

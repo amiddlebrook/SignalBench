@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS quality_gates(id TEXT PRIMARY KEY,suite_id TEXT NOT NULL REFERENCES suites(id),name TEXT NOT NULL,min_pass_rate REAL NOT NULL,min_cases INTEGER NOT NULL,baseline_run_id TEXT REFERENCES runs(id),created_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS gate_verdicts(id TEXT PRIMARY KEY,gate_id TEXT NOT NULL REFERENCES quality_gates(id),run_id TEXT NOT NULL REFERENCES runs(id),outcome TEXT NOT NULL,pass_rate REAL NOT NULL,passed INTEGER NOT NULL,failed INTEGER NOT NULL,regressions INTEGER NOT NULL,detail TEXT NOT NULL,created_at TEXT NOT NULL);
+CREATE INDEX IF NOT EXISTS idx_verdict_gate ON gate_verdicts(gate_id,created_at DESC);

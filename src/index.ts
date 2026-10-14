@@ -1,3 +1,4 @@
+import { advancedApi } from './advanced';
 import { withApi, body, first, list, execute, uid, now, json, required, oneOf, fail, limit, generate, count, type Env } from './core';
 type Suite={id:string,name:string,description:string};
 type Case={id:string,suite_id:string,title:string,prompt:string,expected_contains:string,forbidden_contains:string};
@@ -16,6 +17,7 @@ async function details(env:Env,id:string) {
 }
 export async function api(req:Request,env:Env,url:URL):Promise<Response>{
   const p=url.pathname,m=req.method;
+  const enhanced=await advancedApi(req,env,url); if(enhanced) return enhanced;
   if(p==='/api/seed'&&m==='POST') {
     const n=await first<{n:number}>(env,'SELECT count(*) n FROM suites');if(count(n))return json({seeded:false});
     const suite=uid(),target=uid(),ts=now();await execute(env,'INSERT INTO suites VALUES(?,?,?,?)',suite,'Foundational reliability checks','Small deterministic fixture benchmark; not a security certification',ts);

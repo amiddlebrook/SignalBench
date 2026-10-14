@@ -117,6 +117,63 @@ export default {
         "endpoint": "/api/runs/{id}/step",
         "input": []
       }
+    },
+    {
+      "id": "quality-gates",
+      "label": "Release Quality Gates",
+      "endpoint": "/api/gates",
+      "fields": [
+        {
+          "name": "suite_id",
+          "type": "reference",
+          "source": "/api/suites"
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "default": "Staging release policy"
+        },
+        {
+          "name": "min_pass_rate",
+          "type": "number",
+          "default": 0.95
+        },
+        {
+          "name": "min_cases",
+          "type": "number",
+          "default": 10
+        }
+      ],
+      "columns": [
+        "name",
+        "suite",
+        "min_pass_rate",
+        "min_cases",
+        "created_at"
+      ],
+      "action": {
+        "title": "Check completed run",
+        "endpoint": "/api/gates/{id}/check",
+        "input": [
+          {
+            "name": "run_id",
+            "type": "reference",
+            "source": "/api/runs"
+          }
+        ]
+      }
+    },
+    {
+      "id": "verdicts",
+      "label": "Release Verdicts",
+      "endpoint": "/api/verdicts",
+      "columns": [
+        "gate",
+        "outcome",
+        "pass_rate",
+        "regressions",
+        "created_at"
+      ]
     }
   ]
 };
