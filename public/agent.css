@@ -46,3 +46,11 @@
 @media(prefers-reduced-motion:reduce){.agent-workspace *{transition:none!important;animation:none!important}}
 
 .sb-lab{--bg:#0d1120;--fg:#dae8ff;--line:#293451;--panel:#141d33;--field:#0c172d;--accent:#87f5dd;--button-fg:#0c1420;--hover:#24334d;--head:system-ui,sans-serif;--body:ui-sans-serif,system-ui,sans-serif;--round:12px;--field-radius:6px}.sb-lab .ag-lab-header{padding:2rem 2.4rem;background:radial-gradient(circle at 90% -10%,#284b71,transparent 45%),#11182c;border-bottom:1px solid var(--line)}.sb-lab .ag-lab-header h2{font-size:clamp(1.8rem,3vw,3rem);text-transform:uppercase;letter-spacing:-.05em}.sb-lab .ag-lab-heading{display:flex;justify-content:space-between;align-items:center;gap:.5rem}.sb-lab .ag-lab-heading span{font:700 3rem ui-monospace,monospace;color:#87f5dd}.sb-lab .ag-code span{color:#87f5dd}.sb-lab .ag-instruments{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}.sb-lab .ag-instruments>div{display:grid;gap:.35rem;padding:1rem 2.3rem;border-right:1px solid var(--line)}.sb-lab .ag-instruments span{font-size:.66rem;opacity:.7}.sb-lab .ag-instruments strong{font-size:.82rem}.sb-lab .ag-lab-columns{display:grid;grid-template-columns:215px minmax(0,1fr) 205px}.sb-lab .ag-test-list,.sb-lab .ag-inventory{padding:1.5rem;background:#11192d}.sb-lab .ag-test-list{border-right:1px solid var(--line)}.sb-lab .ag-inventory{border-left:1px solid var(--line)}.sb-lab .ag-test-list input{width:100%;margin:1rem 0}.sb-lab .ag-lab-main{padding:1.6rem}.sb-lab .ag-event header{color:var(--accent)}.sb-lab .ag-run small{color:#a7f9eb}
+
+/* Reviewed evidence: accessible sign-off and product-specific presentation. */
+.ag-review{padding:1.1rem;margin:1.3rem 0;border:1px solid currentColor;border-radius:8px}
+.ag-review h3{margin:.3rem 0 1rem}.ag-review-disclaimer{font-size:.78rem;opacity:.77}
+.ag-review-form{display:grid;gap:.9rem}.ag-review-form label{display:grid;gap:.35rem;font-size:.8rem}
+.ag-review-form textarea,.ag-review-form select{width:100%;min-height:2.4rem;padding:.7rem;background:var(--ag-panel,transparent);color:inherit;border:1px solid currentColor;border-radius:4px}
+.ag-review-form textarea{min-height:6rem}.ag-review-signed{padding:.9rem;border-left:4px solid currentColor}.ag-review-signed small{opacity:.75}
+.sb-laboratory .ag-review{background:#101c28;border-top:4px solid #9eecc3}
