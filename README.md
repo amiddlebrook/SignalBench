@@ -20,7 +20,7 @@ Evidence-first model evaluation and release gating.
 
 ## The problem
 
-The hardest part of evaluation chamber is not drawing a dashboard—it is making consequential decisions inspectable, recoverable and accountable.
+A high aggregate score can hide failed cases, incomplete runs, or a weak comparison baseline. SignalBench keeps evaluation evidence at case level, freezes suites for repeatability, and uses explicit statistical and policy gates to decide whether a candidate is eligible for promotion.
 
 **SignalBench** is an engineering platform for evidence-first model evaluation and release gating. Its primary audience is **ML engineers validating prompts, classifiers and AI releases**. Evaluate cases, compare baselines, and block promotions that lack evidence.
 
