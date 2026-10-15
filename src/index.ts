@@ -42,7 +42,10 @@ export async function api(req:Request,env:Env,url:URL):Promise<Response>{
   if(p==='/api/cases'&&m==='GET')return json({items:await list(env,'SELECT c.*,s.name suite FROM cases c JOIN suites s ON c.suite_id=s.id ORDER BY c.created_at DESC LIMIT ?',limit(url))});
   if(p==='/api/cases'&&m==='POST') {
     const b=await body(req),suite=await first<Suite>(env,'SELECT * FROM suites WHERE id=?',required(b.suite_id,'suite_id'));
-    if(!suite) fail(404,'Suite not found');const id=uid();
+    if(!suite) fail(404,'Suite not found');
+    const historical=await first<{n:number}>(env,'SELECT COUNT(*) n FROM runs WHERE suite_id=?',suite.id);
+    if(count(historical)>0)fail(409,'Evaluation suite is locked once a run exists. Create a new suite to change cases.');
+    const id=uid();
     await execute(env,'INSERT INTO cases VALUES(?,?,?,?,?,?,?)',id,suite.id,required(b.title,'title'),required(b.prompt,'prompt',4000),String(b.expected_contains||'').slice(0,300),String(b.forbidden_contains||'').slice(0,300),now());return json({id},201);
   }
   if(p==='/api/targets'&&m==='GET')return json({items:await list(env,'SELECT * FROM targets ORDER BY created_at DESC LIMIT ?',limit(url))});
