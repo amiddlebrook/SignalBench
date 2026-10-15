@@ -1,3 +1,5 @@
+> **Phase 29:** Offline SQLite/D1-schema disaster-recovery rehearsal is enforced in both GitHub CI and deployment; live production D1 restoration is still unverified. See [recovery assurance](docs/PHASE29_RECOVERY_ASSURANCE.md).
+
 > **Phase 28:** Evaluation results and run counters commit atomically, with out-of-order and injected-failure regression tests. See [atomic evaluations](docs/PHASE28_ATOMIC_EVALUATIONS.md).
 
 > **Phase 27:** Chromium desktop/mobile and authenticated browser acceptance now runs on every **live Cloudflare deployment**, with guest-only screenshots. See [production browser verification](docs/PHASE27_BROWSER_ACCEPTANCE.md).
