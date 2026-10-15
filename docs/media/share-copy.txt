@@ -1,0 +1,1 @@
+SignalBench turns evaluation results into explicit release evidence: frozen case suites, baseline comparisons, and auditable gates. Live on Cloudflare Workers and D1.
