@@ -2,7 +2,7 @@ import {body,first,list,execute,json,required,oneOf,fail,now,uid,type Env} from 
 export async function decisionApi(req:Request,env:Env,url:URL):Promise<Response|null>{
  const p=url.pathname;
  if(p==='/api/decision/triage'&&req.method==='GET'){
-  const [failures,history]=await Promise.all([list(env,'SELECT r.id,r.run_id,r.case_id,c.title case_title,r.reasons,r.output,r.created_at FROM results r JOIN cases c ON c.id=r.case_id WHERE r.passed=0 ORDER BY r.created_at DESC LIMIT 100'),list<{result_id:string;status:string;severity:string;owner:string;note:string;created_at:string}>(env,'SELECT result_id,status,severity,owner,note,created_at FROM failure_triage ORDER BY created_at DESC LIMIT 500')]);
+  const [failures,history]=await Promise.all([list(env,'SELECT r.id,r.run_id,r.case_id,c.title case_title,r.reasons,r.output,r.created_at FROM results r JOIN cases c ON c.id=r.case_id WHERE r.passed=0 ORDER BY r.created_at DESC LIMIT 100'),list<{result_id:string;status:string;severity:string;owner:string;note:string;created_at:string}>(env,'SELECT result_id,status,severity,owner,note,created_at FROM failure_triage ORDER BY created_at DESC, rowid DESC LIMIT 500')]);
   const latest=new Map<string,typeof history[number]>();for(const row of history)if(!latest.has(row.result_id))latest.set(row.result_id,row);
   return json({items:(failures as {id:string}[]).map(f=>({...f,triage:latest.get(f.id)||null})),limits:{failures:100,triage_events:500},note:'Only recorded failed evaluation results appear here; triage history is append-only.'});
  }
