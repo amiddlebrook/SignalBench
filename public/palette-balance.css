@@ -1,0 +1,13 @@
+/* SignalBench / Phase 23 — slate lab, violet comparison, cyan evidence, amber failure. */
+:root{--bg:#101a26;--surface:#1b2936;--surface2:#263743;--line:#3d5260;--text:#f0f5f7;--muted:#afc0ca;--accent:#b8a7ff;--info:#6ed6d9;--success:#75dab2;--warning:#ffd08b;color-scheme:dark}
+body{background:#111c28;color:#eff4f7}.sidebar{background:#101b28;border-right:1px solid #365066}.nav button.active,.nav button:hover{background:#243d50;border-color:#55738a;color:#e1f6fc}.nav button.active{box-shadow:inset 3px 0 #67ced6}
+.panel,.stat,.sb16-hero,.sb16-center,.sb16-specimen,.sb16-observatory,.sb16-gate,.sb16-wait{background:#1c2b37;border-color:#395364}
+.sb16,.sb17-labbar{color:#e6edf2}.sb16-rule{border-color:#486272;color:#a9cbd9}.sb16-orb{background:#233845}.sb16-bignum{color:#e8f0f8}.sb16-flag{color:#78d7d9}.sb16-comparator{background:#16232f;border-color:#3b5867}
+.sb16-columnhead:nth-child(2),.sb16-c2{border-top:3px solid #68d0d3}.sb16-columnhead:nth-child(3),.sb16-c3{border-top:3px solid #dfab77}
+.sb-scorebox,.sb-case-gallery,.sb-case{background:#213240;border-color:#435e70}.sb-scorebox>small,.sb-case p{color:#bfced7}
+.lab-hero{background:linear-gradient(116deg,#213343,#1a2936 65%,#26364d);border:1px solid #486474;border-left:5px solid #7dd5d8}.lab-kicker{color:#7ed5dd;opacity:1}
+.lab-panel{background:#1d2d3b;border:1px solid #4a6272}.lab-panel select,.lab-panel textarea{background:#13222f;color:#edf6f8;border:1px solid #577181}
+.lab-panel button,.btn{background:#a69aff;color:#111c28}.lab-stats span{background:#253f51;color:#bfeef1;border:1px solid #436b79}.lab-stats span:nth-child(2){background:#43352e;color:#ffd09b;border-color:#816047}.lab-stats span:nth-child(3){background:#283e43;color:#9be6cb;border-color:#47746d}
+.lab-matrix th{background:#243744;color:#f2f7fa}.lab-matrix tr:nth-child(even){background:#172631}.lab-matrix tr:hover{background:#273d4b}.lab-result.pass,.lab-status.good{color:#8be9b8}.lab-result.fail,.lab-status.bad{color:#ffd091}.lab-result.unknown{color:#b7c6d1}
+.lab-filter{background:#172b39;color:#ecf6f9}.lab-caption{color:#c6d4dd;opacity:1}
+:where(button,a,input,select,textarea):focus-visible{outline:3px solid #8edce3;outline-offset:2px}
