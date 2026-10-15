@@ -4,6 +4,7 @@ export default {
   "accent": "#8ca9ff",
   "icon": "◈",
   "sections": [
+    {"id":"mission","label":"Comparison Chamber","custom":"mission"},
     {"id":"registry","label":"Records Explorer","custom":"registry"},
     {
       "id": "atlas",
