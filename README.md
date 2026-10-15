@@ -13,6 +13,11 @@ An AI reliability laboratory for defining evaluation suites, inspecting case-lev
 
 > **Project status — portfolio engineering application.** The interfaces, D1-backed APIs, tests, and automatic deployment are functional. This is **not** a certified or audited enterprise product, and there are no claims of SSO, multi-tenant isolation, unbounded free usage, or uptime SLAs.
 
+
+## Phase 15 — distinct flagship workspaces
+
+Comparison Chamber: selectable evaluations, measured pass-rate deltas, release-threshold advisory and run matrix. The flagship is now the first screen. [Interface and security notes](docs/FLAGSHIP_WORKSPACE.md).
+
 ## Decision workspace (Phase 8)
 
 A dedicated operational decision screen is available under **Failure Triage**. This includes a real D1-backed API, validated writes and a product-specific interface; see [Decision workspace architecture](docs/DECISION_WORKSPACE.md).
