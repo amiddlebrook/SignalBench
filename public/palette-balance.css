@@ -25,3 +25,26 @@ body{background:#111c28;color:#eff4f7}.sidebar{background:#101b28;border-right:1
  .readability-controls .readability-select{width:112px!important;min-width:112px!important;max-width:125px!important;font-size:14px!important;}
  .readability-controls .readability-menu{border-radius:8px!important;background:#254b68!important;color:#e7f4fb!important;border:1px solid #386c91!important;}
 }
+
+/* Phase 27 visual evidence review: neutral instrumentation surfaces; violet is a data accent, not a wall color. */
+.s5-shell{background:radial-gradient(ellipse at 65% -10%,#273645 0,#16212f 48%,#101923 100%);color:#e9f1fa}
+.s5-appbar{background:#101b28;border-bottom-color:#344857}
+.s5-tabrail.nav{background:#182532;border-bottom-color:#425769}
+.s5-tabrail.nav button{color:#c2ced9}
+.s5-tabrail.nav button.active{background:#293d4d;color:#fff;border-bottom-color:#a894f0}
+.s5-lab .topbar{border-bottom-color:#516574}
+.s5-footer{border-color:#42596b;color:#a8bbcd}
+.s5-test-tile{background:#1c303e;border-color:#455d6d}
+.sb16{color:#e9edf5}
+.sb16-rule{border-color:#556a7a;color:#b1c6d5}
+.sb16-ruler{background:#273b48;color:#c8d6e1}
+.sb17-labbar{background:#1e303e;border-color:#53687d}
+.sb17-labbar span{color:#bdcddd}
+.sb17-labbar button:last-child{border-color:#68788b;color:#e0eaf1}
+.sb16-comparator{background:#1d303d;border-color:#526a7b}
+.sb16-specimen{background:#203340;color:#eff7fa}
+.sb16-center{background:#253b48;border-color:#526b7c}
+.sb16-run:hover{background:#2a4250}
+.sb16-observatory{background:#1b2d3a;border-color:#496171}
+.sb16-columnhead{background:#293b4a;color:#d1dce6}
+.p17-provenance{background:#1b2d3a;color:#a8d1d4;border-color:#4c7182}
