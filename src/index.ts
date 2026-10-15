@@ -69,8 +69,7 @@ export async function api(req:Request,env:Env,url:URL):Promise<Response>{
       const start=Date.now();const output=target.mode==='echo_fixture'?`FIXTURE ECHO: ${item.prompt}`:await generate(env,target.system_prompt,item.prompt,400);
       const latency=Date.now()-start,score=grade(output,item.expected_contains,item.forbidden_contains);
       await execute(env,'INSERT INTO results VALUES(?,?,?,?,?,?,?,?)',uid(),r.id,item.id,output,score.passed?1:0,JSON.stringify(score.reasons),latency,now());
-      const total=count(await first<{n:number}>(env,'SELECT count(*) n FROM cases WHERE suite_id=?',r.suite_id));
-      await execute(env,'UPDATE runs SET cursor=?,passed=?,failed=?,status=?,updated_at=? WHERE id=?',r.cursor+1,r.passed+(score.passed?1:0),r.failed+(score.passed?0:1),r.cursor+1>=total?'completed':'running',now(),r.id);
+      // A D1 SQLite trigger commits the result and updates run counters atomically.
     }catch(err){await execute(env,"UPDATE runs SET status='failed',updated_at=? WHERE id=?",now(),r.id);throw err}
     return json(await details(env,r.id));
   }
