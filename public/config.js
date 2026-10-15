@@ -4,6 +4,8 @@ export default {
   "accent": "#8ca9ff",
   "icon": "◈",
   "sections": [
+    {"id":"ops","label":"API Activity","custom":"ops"},
+    {"id":"studio","label":"Comparison Lab","custom":"studio"},
     {
       "id": "suites",
       "label": "Suites",
