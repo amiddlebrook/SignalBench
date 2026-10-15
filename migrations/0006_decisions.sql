@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS failure_triage(id TEXT PRIMARY KEY,result_id TEXT NOT NULL REFERENCES results(id),status TEXT NOT NULL CHECK(status IN ('open','investigating','resolved','accepted_risk')),severity TEXT NOT NULL CHECK(severity IN ('low','medium','high','critical')),owner TEXT NOT NULL,note TEXT NOT NULL,created_at TEXT NOT NULL);
+CREATE INDEX IF NOT EXISTS idx_triage_result ON failure_triage(result_id,created_at DESC);

@@ -4,6 +4,8 @@ export default {
   "accent": "#8ca9ff",
   "icon": "◈",
   "sections": [
+    {"id":"agent","label":"Triage Agent","custom":"agent"},
+    {"id":"decisions","label":"Failure Triage","custom":"decisions"},
     {"id":"ops","label":"API Activity","custom":"ops"},
     {"id":"studio","label":"Comparison Lab","custom":"studio"},
     {
