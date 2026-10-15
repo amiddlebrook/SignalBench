@@ -1,0 +1,23 @@
+{
+  "accent": "#AF9BFF",
+  "background": "#121325",
+  "hook": "DON\u2019T SHIP A REGRESSION.",
+  "subhook": "Compare evaluations before making the release call.",
+  "feature1": "Read the result, case by case.",
+  "feature2": "No evidence, no promotion.",
+  "proof": [
+    "Frozen evaluation suites",
+    "Atomic result accounting",
+    "Statistical gate options"
+  ],
+  "mobileTitle": "Release signals, clearly.",
+  "mobileLines": [
+    "Inspect baseline deltas.",
+    "Review case-level failures.",
+    "Preview, then decide."
+  ],
+  "closing": "Evidence before promotion.",
+  "closingLine": "Explore the evaluation lab and release gate.",
+  "share": "SignalBench turns evaluation results into explicit release evidence: frozen case suites, baseline comparisons, and auditable gates. Live on Cloudflare Workers and D1.",
+  "name": "SignalBench"
+}
