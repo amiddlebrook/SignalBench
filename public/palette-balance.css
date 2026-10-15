@@ -11,3 +11,17 @@ body{background:#111c28;color:#eff4f7}.sidebar{background:#101b28;border-right:1
 .lab-matrix th{background:#243744;color:#f2f7fa}.lab-matrix tr:nth-child(even){background:#172631}.lab-matrix tr:hover{background:#273d4b}.lab-result.pass,.lab-status.good{color:#8be9b8}.lab-result.fail,.lab-status.bad{color:#ffd091}.lab-result.unknown{color:#b7c6d1}
 .lab-filter{background:#172b39;color:#ecf6f9}.lab-caption{color:#c6d4dd;opacity:1}
 :where(button,a,input,select,textarea):focus-visible{outline:3px solid #8edce3;outline-offset:2px}
+
+/* Phase 27 mobile acceptance: compact operation controls without hiding navigation. */
+@media(max-width:640px){
+ .topbar .actions{display:grid!important;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr)!important;gap:8px!important;width:100%;align-items:center!important;}
+ .topbar .actions>.enterprise-mode-button,.topbar .actions>.enterprise-quick{display:none!important;}
+ .topbar .actions>#auth,.topbar .actions>#refresh{grid-row:1;min-width:0!important;width:100%!important;max-width:none!important;padding:8px!important;font-size:14px!important;overflow-wrap:anywhere;}
+ .topbar .actions>#auth{grid-column:1;}
+ .topbar .actions>#refresh{grid-column:2;}
+ .topbar .actions>.readability-controls{grid-column:1/-1;grid-row:2;display:grid!important;grid-template-columns:minmax(104px,1fr) minmax(190px,2fr);gap:8px!important;width:100%!important;min-width:0;align-items:center;}
+ .readability-controls>.readability-menu{display:inline-flex!important;width:100%!important;margin:0!important;min-width:0!important;justify-content:center;}
+ .readability-controls>.readability-label{min-width:0;display:flex!important;align-items:center;justify-content:flex-end;gap:7px;white-space:nowrap!important;font-size:12px!important;margin:0!important;}
+ .readability-controls .readability-select{width:112px!important;min-width:112px!important;max-width:125px!important;font-size:14px!important;}
+ .readability-controls .readability-menu{border-radius:8px!important;background:#254b68!important;color:#e7f4fb!important;border:1px solid #386c91!important;}
+}
