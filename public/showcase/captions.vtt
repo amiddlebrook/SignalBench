@@ -1,0 +1,10 @@
+WEBVTT
+
+00:00:00.900 --> 00:00:06.400
+Meet SignalBench. Compare model evaluations against frozen test suites and a pinned baseline.
+
+00:00:06.400 --> 00:00:12.600
+Inspect failed cases, measure confidence, and block model releases
+
+00:00:12.600 --> 00:00:19.700
+when the evidence does not meet your promotion policy.
