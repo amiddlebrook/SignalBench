@@ -1,0 +1,1 @@
+Meet SignalBench. Compare model evaluations against frozen test suites and a pinned baseline. Inspect failed cases, measure confidence, and block model releases when the evidence does not meet your promotion policy.
