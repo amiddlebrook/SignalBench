@@ -8,11 +8,11 @@ Evidence-first model evaluation and release gating.
 
 [![CI](https://github.com/amiddlebrook/SignalBench/actions/workflows/ci.yml/badge.svg)](https://github.com/amiddlebrook/SignalBench/actions/workflows/ci.yml) [![Cloudflare deployment](https://github.com/amiddlebrook/SignalBench/actions/workflows/deploy.yml/badge.svg)](https://github.com/amiddlebrook/SignalBench/actions/workflows/deploy.yml) [![MIT License](https://img.shields.io/badge/license-MIT-2381C5)](LICENSE) [![Zero mandatory cost](https://img.shields.io/badge/hosting-free--tier%20only-129E80)](docs/ZERO_COST_POLICY.md)
 
-**[Launch application](https://portfolio-signalbench.averymiddlebrook2014.workers.dev)** · **Full 20-second demo plays right below** · [Architecture](docs/ARCHITECTURE.md) · [Security](docs/SECURITY.md) · [Roadmap](docs/ROADMAP.md)
+**[Launch application](https://portfolio-signalbench.averymiddlebrook2014.workers.dev)** · **[▶ WATCH THE 20-SECOND DEMO WITH SOUND](https://portfolio-signalbench.averymiddlebrook2014.workers.dev/showcase/index.html)** · [Architecture](docs/ARCHITECTURE.md) · [Security](docs/SECURITY.md) · [Roadmap](docs/ROADMAP.md)
 
-![SignalBench — full 20-second product demo, autoplaying inline and looping](docs/media/brag-inline.gif)
+[![SignalBench — 20-second animated README preview; click to watch the complete narrated video with audio](docs/media/brag-inline.gif)](https://portfolio-signalbench.averymiddlebrook2014.workers.dev/showcase/index.html)
 
-*The entire 20-second walkthrough plays automatically and loops right here in the README (silent; no download). The footage uses real public Cloudflare UI captures with illustrative guest-mode records, not paid AI execution.*
+*The preview loops silently on GitHub. **Click the animation to watch the full 20-second version with spoken narration and sound in your browser**—no download or account required. Real public Cloudflare UI captures with illustrative guest-mode records; no paid AI execution is claimed.*
 
 </div>
 
@@ -29,7 +29,7 @@ A high aggregate score can hide failed cases, incomplete runs, or a weak compari
 
 ## See it work
 
-**Watch the full 20-second animated walkthrough embedded above.** It runs inline, loops automatically, and requires no MP4 download or separate tab.
+**[▶ Play the full narrated 20-second product demo (sound + captions)](https://portfolio-signalbench.averymiddlebrook2014.workers.dev/showcase/index.html).** The animation above remains an autoplaying preview. GitHub cannot attach audio to GIFs; the linked player has native video and audio controls.
 
 **[↗ Try the live guest demo](https://portfolio-signalbench.averymiddlebrook2014.workers.dev)** · [Storyboard and reproduction](docs/BRAG_DEMO.md) · [Optional high-resolution MP4](docs/media/brag.mp4)
 
